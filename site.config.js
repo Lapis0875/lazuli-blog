@@ -1,5 +1,5 @@
 const CONFIG = {
-  // profile setting
+  // profile setting (required)
   profile: {
     name: 'lapis',
     image: '/avatar.png',  // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
@@ -24,14 +24,14 @@ const CONFIG = {
       href: 'https://github.com/Lapis0875/SimpleLock'
     }
   ],
-  // blog setting
+  // blog setting (required)
   blog: {
     title: 'lazuli',
     description: 'welcome to lazuli!',
     theme: 'auto' // ['light', 'dark', 'auto']
   },
 
-  // CONFIG configration
+  // CONFIG configration (required)
   link: 'https://lazuli-blog.vercel.app',
   since: 2023, // If leave this empty, current year will be used.
   lang: 'ko-KR', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
@@ -40,22 +40,22 @@ const CONFIG = {
     keywords: ['Blog', 'Website', 'Notion', 'Life', 'Dev', 'Programming', 'Food', 'Desert', 'Pictures'],
   },
 
-  // notion configuration
+  // notion configuration (required)
   notionConfig: {
     pageId: process.env.NOTION_PAGE_ID,
   },
 
-  // plugin configuration
+  // plugin configuration (optional)
   googleAnalytics: {
     enable: false,
     config: {
-      measurementId: '' // ex. G-9N3FE0117Q
+      measurementId: process.env.GOOGLE_MEASUREMENT_ID || ''
     }
   },
   googleSearchConsole: {
     enable: false,
     config: {
-      siteVerification: '' // ex. qvdR1gXMirk_DCUOKPgRnxu2x6fqSPrquYnEZZMjR9w
+      siteVerification: process.env.GOOGLE_SITE_VERIFICATION || ''
     }
   },
   utterances: {

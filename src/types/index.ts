@@ -7,14 +7,14 @@ export type TPost = {
   summary?: string
   author?: {
     id: string
-    first_name: string
-    last_name: string
+    name: string
     profile_photo: string
   }[]
   title: string
   status: string[]
   createdTime: string
   fullWidth: boolean
+  thumbnail?: string
 }
 
 export type TPosts = TPost[]
